@@ -81,8 +81,8 @@ def txt_list(file):
 # 获取输入的路径
 def auto_tools_run():
     result.config(state='normal')
-    source_path = input_source_path.get()
-    revised_path = input_revised_path.get()
+    source_path = input_source_path.get().replace('\\', '/')
+    revised_path = input_revised_path.get().replace('\\', '/')
 
     list_info = []  # 存放关于每个txt词数和ratio的列表
     list_source = findall_txt(source_path)
